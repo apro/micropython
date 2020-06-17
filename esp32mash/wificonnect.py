@@ -16,7 +16,7 @@ def connect():
           wlan.active(True)
           wlan.connect(wifi['ssid'], wifi['password'])
           wait = 20
-          while not wifi.isconnected() and wait>0:
+          while not wlan.isconnected() and wait>0:
             wait -= 1
             time.sleep_ms(200)
             print('.')
